@@ -44,9 +44,8 @@ $(function() {
         donorName.text(repDonors["@attributes"].org_name);
 
         var donationAmount = result.find(".donation-amount");
-        var formattedDA = $.number(repDonors["@attributes"].total); 
+        var formattedDA = $.number(repDonors["@attributes"].total);
         donationAmount.text("$" + formattedDA);
-
 
         return result;
     };
@@ -120,6 +119,8 @@ $(function() {
                     $(".receiving-rep").text(receivingRep);
                     $(".donors").append(representativeDonors);
                     $(".donors-container").show();
+                    $(".donors-content").addClass("show");
+
 
                 })
                 //$(".donors").append("<li>" +item["@attributes"].org_name+ ": " + "$" +item["@attributes"].total+   "</li>")
